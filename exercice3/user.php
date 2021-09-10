@@ -1,3 +1,16 @@
+<?php
+
+$cookie_login_name = 'login';
+$cookie_login_value = $_GET['login'];
+// **************************************
+$cookie_password_name = 'password';
+$cookie_password_value = password_hash($_GET['password'], PASSWORD_BCRYPT);
+
+setcookie($cookie_login_name, $cookie_login_value,time()+120, '/');
+setcookie($cookie_password_name, $cookie_password_value,time()+120, '/');
+
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -6,13 +19,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
     <link rel="stylesheet" href="../assets/css/style.css">
-    <title>exercice 5 php</title>
+    <title>exercice 3php</title>
 </head>
 <body>
-    
+
+
 <div class="text-white d-flex justify-content-center">
 
 </div>
-
 </body>
 </html>

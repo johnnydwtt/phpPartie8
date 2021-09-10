@@ -1,3 +1,10 @@
+<?php
+    $login= $_COOKIE['login'];
+    $password= $_COOKIE['password'];
+    setcookie('login', 'johnny',time()+30, '/');
+    setcookie('password', 'monmotdepasse',time()+30, '/');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -15,9 +22,13 @@
 <hr class="bg-light">
 <div class="text-white d-flex justify-content-center">
 
-<?php
-
-?>
+<div class="text-white d-flex justify-content-center text-center flex-column">
+        Vos informations :<br>
+        <hr>
+        Identifiant = <?=$login;?></br>
+        Mot de passe = <?=$password;?></br>
+        <hr>
+</div>
 
 </div>
 <hr class="bg-light">
